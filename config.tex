@@ -1,0 +1,74 @@
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\usepackage[ngerman]{babel}
+\usepackage[ngerman]{translator} % Weitere Übersetzungen
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{roboto}
+\usepackage{sectsty}
+\usepackage{lastpage}
+\usepackage{layout}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{geometry}            % Dient zur Interface dimensionierung
+\usepackage{pdflscape}           % bessere Lesbarkeit des PDF Dokuments
+\usepackage{typearea}  % loaded automatically if using KOMA-Script class
+\usepackage{etoolbox}
+\usepackage{pgfgantt}
+
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+\lstset{language=ruby}
+
+\hypersetup{%
+    colorlinks=false,% hyperlinks will be black
+    pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
+}
+
+\titleformat{\chapter}{\Huge\bfseries\sffamily}{\thechapter}{1em}{\Huge}
+
+%Tabellen Caption links orientiert
+\captionsetup[table]{skip=0pt,singlelinecheck=off}
+
+%Weitere Spalten typen
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%Seitenformatierung anpassen
+\textwidth=400pt
+\textheight=600pt
+\oddsidemargin=25pt
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+
+%Sans seriff Font
+\allsectionsfont{\sffamily}
+
+%Header höhe anpassen
+\setlength\headheight{33pt}
+%Bilderpfad
+\graphicspath{{bilder/}}
+%Header und Footer
+\fancyhf{}
+\lfoot{\today}
+\rfoot{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
+\lhead{Symmetrische und Asymmetrische Verschlüsselungsarten}
+\rhead{Sylvain Gilgen}
+
+%Weiteres
+\definecolor{puzzleblue}{RGB}{30,90,150}
+\author{Sylvain}
+\title{IPA}
