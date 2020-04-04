@@ -1,15 +1,11 @@
-\documentclass{report}
+\documentclass{article}
 
 \include{config}
 \include{codestyle}
 
 \begin{document}
-\Huge Symmetrische und Asymmetrische Verschlüsselungsarten\normalsize
-\\
-\\
-\huge \textbf{Symmetrische Verschlüsselung} \normalsize 
-\\
-\\
+\huge \textbf{Symmetrische und Asymmetrische Verschlüsselungsarten} \normalsize
+\section*{Symmetrische Verschlüsselung}
 Bei symmetrischen Verschlüsselungsverfahren wird ein Schlüssel verwendet zum ver- und entschlüsseln. Aus diesem Grund ist es ein symmetrisches Verfahren.
 
 Symmetrische Verschlüsselungsverfahren:
@@ -26,10 +22,14 @@ Symmetrische Verschlüsselungsverfahren:
     \item Fox
 \end{itemize} \cite{1} \\
 
-Das Prinzip der symmetrischen Verschlüsselung ist ganz einfach. Es gibt nur einen Schlüssel, der sowohl für die Ver- wie auch für die Entschlüsselung benötigt wird. 
+Das Prinzip der symmetrischen Verschlüsselung ist ganz einfach. Es gibt nur einen Schlüssel, der sowohl für die Ver- wie auch für die Entschlüsselung benötigt wird. \\
+\includegraphics[width=0.6\textwidth]{sym} \\
+\cite{3}
+\\
+
 Die symmetrischen Verfahren können in zwei Gruppen aufgeteilt werden, Stromchiffren und Blockchiffren. Mit Stromchiffren wird der Klartext Zeichen für Zeichen ver- und auch entschlüsselt. Bei Blockchiffren werden Zeichen des Texts in feste Blockgrössen eingeteilt, so dass mehrere Zeichen in einem Schritt ver- oder auch entschlüsselt werden können. \\
 
-Bei der symmetrischen Verschlüsselung muss ser Schlüssel gut geschützt werden da er direkten Zugriff auf die Daten gibt. Die grösste Gefahr für den Schlüssel ist in der Übermittlung. Aus diesem Grund gibt es spezielle Protokolle um dies zu machen. Das bekannteste Protokoll ist \href{https://www.youtube.com/watch?v=NmM9HA2MQGI}{Diffie-Hellman}.
+Bei der symmetrischen Verschlüsselung muss der Schlüssel gut geschützt werden da er direkten Zugriff auf die Daten gibt. Die grösste Gefahr für den Schlüssel ist in der Übermittlung. Aus diesem Grund gibt es spezielle Protokolle um dies zu machen. Das bekannteste Protokoll ist \href{https://www.youtube.com/watch?v=NmM9HA2MQGI}{Diffie-Hellman}. \\
 
 
 \textbf{Vorteile:}
@@ -45,18 +45,23 @@ Bei der symmetrischen Verschlüsselung muss ser Schlüssel gut geschützt werden
     \item Anzahl der Schlüssel bezogen auf die Anzahl der Teilnehmer wächst quadratisch
 \end{itemize}\cite{1} \\
 
-\huge \textbf{Asymmetrische Verschlüsselung} \normalsize 
-\\
-\\
-Bei einem Asymmetrischen Verschlüsselungsverfahren werden zwei Schlüssel verwendet zum ver- und entschlüsseln. Dieses sogenannte Schlüsselpaar setzt sich aus einem privaten Schlüssel und einem öffentlichen Schlüssel zusammen. Mit dem privaten Schlüssel, werden Daten Entschlüsselt oder eine digitale Signatur erzeugt. Mit dem öffentlichen Schlüssel kann man Daten verschlüsseln und erzeugte Signaturen auf ihre Authentizität überprüfen.\\
+\section*{Asymmetrische Verschlüsselung}
 
-\textbf{Weitere Asymmetrische Kryptosysteme:}
+Bei einem Asymmetrischen Verschlüsselungsverfahren werden zwei Schlüssel verwendet zum ver- und entschlüsseln. Dieses sogenannte Schlüsselpaar setzt sich aus einem privaten Schlüssel und einem öffentlichen Schlüssel zusammen. Mit dem privaten Schlüssel, werden Daten Entschlüsselt oder eine digitale Signatur erzeugt. Mit dem öffentlichen Schlüssel kann man Daten verschlüsseln und erzeugte Signaturen auf ihre Authentizität überprüfen. \\
+
+\includegraphics[width=0.6\textwidth]{asym.png} \\
+\cite{4} \\
+
+\textbf{Asymmetrische Kryptosysteme:}
 \begin{itemize}
-    \item Elliptische-Kurven-Verfahren - Basis sind elliptische Kurven / Ähnelt Elgamal
-    \item Merkle/Hellman - basierend auf dem Tornister-Problem
-    \item LUC - ähnlich RSA, Bildung der Lucas-Folge
-    \item MNLN - wie RSA, aber das Polynom xe durch »Dickson-Polynom« ersetzt
-    \item Digital Signature Algorithm (DSA) - basiert auf dem Diskreten Logarithmus- Problem und benutzt die Kryptosysteme von Schnorr und ElGamal
+    \item Ed25519, Ed448 signing
+    \item X25519, X448 key exchange
+    \item Elliptic curve cryptography
+    \item RSA
+    \item Diffie-Hellman key exchange
+    \item DSA
+    \item Key Serialization
+    \item Asymmetric Utilities
 \end{itemize}
 \cite{2} \\
 
@@ -87,9 +92,10 @@ Anwendung finden asymmetrische Kryptosysteme bei Verschlüsselungen, Authentifiz
 \end{itemize}
 \cite{2}
 
-
 \begin{thebibliography}{9}
     \bibitem[Kryptowissen 1]{1} \emph{\url{https://www.kryptowissen.de/symmetrische-verschluesselung.html}}, used: 28.03.2020
     \bibitem[Kryptowissen 2]{2} \emph{\url{https://www.kryptowissen.de/asymmetrische-verschluesselung.html}}, used: 28.03.2020
+    \bibitem[ssl2buy]{3} \emph{\url{https://www.ssl2buy.com/wiki/wp-content/uploads/2015/12/Symmetric-Encryption.png}}, used: 03.04.2020
+    \bibitem[ssl2buy]{4} \emph{\url{https://www.ssl2buy.com/wiki/wp-content/uploads/2015/12/Asymmetric-Encryption.png}}, used: 03.04.2020
 \end{thebibliography}
 \end{document}

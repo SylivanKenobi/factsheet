@@ -47,28 +47,27 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 %Seitenformatierung anpassen
-\textwidth=400pt
-\textheight=600pt
-\oddsidemargin=25pt
+\setlength\headheight{8pt}
+\textwidth=410pt
+\textheight=620pt
+\oddsidemargin=15pt
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
 \setlength{\parindent}{0pt}
+\renewcommand{\headrulewidth}{0pt}
 
 %Sans seriff Font
 \allsectionsfont{\sffamily}
 
-%Header höhe anpassen
-\setlength\headheight{33pt}
 %Bilderpfad
 \graphicspath{{bilder/}}
 %Header und Footer
-\fancyhf{}
+\lhead{}
+\rhead{}
 \lfoot{\today}
 \rfoot{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
-\lhead{Symmetrische und Asymmetrische Verschlüsselungsarten}
-\rhead{Sylvain Gilgen}
+\cfoot{Sylvain Gilgen}
 
 %Weiteres
 \definecolor{puzzleblue}{RGB}{30,90,150}
 \author{Sylvain}
-\title{IPA}
